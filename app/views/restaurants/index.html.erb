@@ -1,0 +1,8 @@
+<h1>Restaurants</h1>
+
+<p><%= link_to '➕ Create a new restaurant', new_restaurant_path %></p>
+
+<% @restaurants.each do |r|  %>
+<p><strong><%= link_to r.name, restaurant_path(r) %></strong> - Food: <%= r.category.capitalize %> <br>
+<%= r.address %> - <%= r.phone_number %></p>
+<% end %>
